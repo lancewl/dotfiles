@@ -1,0 +1,74 @@
+syntax on
+
+set noerrorbells
+set tabstop=4 
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set backspace=indent,eol,start
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set encoding=utf-8
+set fileformat=unix
+set clipboard=unnamed
+set mouse+=a
+
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=235 guibg=lightgrey
+
+call plug#begin('~/.vim/plugged')
+
+" Make sure you use single quotes
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'morhetz/gruvbox'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/syntastic'
+Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'christoomey/vim-tmux-navigator'
+
+call plug#end()
+
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" NERDTree auto open
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" gruvbox theme settings
+let g:gruvbox_contrast_dark = 'hard'
+autocmd vimenter * colorscheme gruvbox
+map <C-n> :NERDTreeToggle<CR>
+
+let g:airline_powerline_fonts = 1
+
+" UltiSnips Settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Syntastic Setttings 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_python_checkers = ['flake8']
