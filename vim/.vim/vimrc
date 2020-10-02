@@ -20,6 +20,9 @@ set fileformat=unix
 set clipboard=unnamed
 set mouse+=a
 
+" For gruvbox
+set termguicolors
+
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=235 guibg=lightgrey
 
