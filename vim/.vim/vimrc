@@ -8,6 +8,7 @@ set expandtab
 set smartindent
 set backspace=indent,eol,start
 set nu
+set cursorline
 set nowrap
 set smartcase
 set noswapfile
@@ -45,6 +46,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'majutsushi/tagbar'
 
 call plug#end()
 
@@ -57,11 +59,11 @@ nnoremap <C-H> <C-W><C-H>
 " NERDTree auto open
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
 
 " gruvbox theme settings
 let g:gruvbox_contrast_dark = 'hard'
 autocmd vimenter * colorscheme gruvbox
-map <C-n> :NERDTreeToggle<CR>
 
 let g:airline_powerline_fonts = 1
 
