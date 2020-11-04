@@ -77,5 +77,8 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
 
+" YouCompleteMy Settings
+let g:ycm_show_diagnostics_ui = 0
+
 " TagBar Settings
 map <C-b> :TagbarToggle<CR>
