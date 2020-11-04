@@ -8,7 +8,6 @@ set expandtab
 set smartindent
 set backspace=indent,eol,start
 set nu
-set cursorline
 set nowrap
 set smartcase
 set noswapfile
@@ -77,3 +76,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
+
+" TagBar Settings
+map <C-b> :TagbarToggle<CR>
