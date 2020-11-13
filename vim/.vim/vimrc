@@ -26,6 +26,8 @@ set termguicolors
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=235 guibg=lightgrey
 
+autocmd BufRead,BufNewFile *.c,*.h setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
