@@ -89,4 +89,4 @@ let g:syntastic_python_checkers = ['flake8']
 let g:ycm_show_diagnostics_ui = 0
 
 " TagBar Settings
-map <C-b> :TagbarToggle<CR>
+map <C-t> :TagbarToggle<CR>
