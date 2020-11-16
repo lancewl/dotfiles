@@ -3,3 +3,4 @@
 ## Dependencies
 
 * Exuberant Ctags (Tagbar)
+* FZF
