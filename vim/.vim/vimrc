@@ -1,4 +1,5 @@
 syntax on
+filetype plugin on
 
 set noerrorbells
 set tabstop=4 
@@ -20,6 +21,10 @@ set fileformat=unix
 set clipboard=unnamed
 set mouse+=a
 set relativenumber
+" Provides tab-completion for all file related tasks
+" - Hit tab to find:
+set path+=**
+set wildmenu
 
 " For gruvbox
 set termguicolors
