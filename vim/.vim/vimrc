@@ -19,6 +19,7 @@ set encoding=utf-8
 set fileformat=unix
 set clipboard=unnamed
 set mouse+=a
+set relativenumber
 
 " For gruvbox
 set termguicolors
