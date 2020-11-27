@@ -51,7 +51,6 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -77,12 +76,6 @@ autocmd vimenter * colorscheme gruvbox
 
 " powerline settings
 let g:airline_powerline_fonts = 1
-
-" Syntastic Setttings 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_checkers = ['flake8']
 
 " TagBar Settings
 map <C-t> :TagbarToggle<CR>
