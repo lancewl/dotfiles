@@ -2,5 +2,7 @@
 
 ## Dependencies
 
-* Exuberant Ctags (Tagbar)
+* node (neovim)
+* python3 (pynvim)
+* Exuberant Ctags (for Tagbar)
 * FZF
