@@ -25,6 +25,7 @@ set relativenumber
 " - Hit tab to find:
 set path+=**
 set wildmenu
+set nohlsearch
 
 " For gruvbox
 set termguicolors
@@ -43,11 +44,9 @@ set signcolumn=yes
 call plug#begin('~/.vim/plugged')
 
 " Make sure you use single quotes
-Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
@@ -56,6 +55,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Theme plugins
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -72,10 +75,11 @@ map <C-n> :NERDTreeToggle<CR>
 
 " gruvbox theme settings
 let g:gruvbox_contrast_dark = 'hard'
-autocmd vimenter * colorscheme gruvbox
+colorscheme gruvbox
 
-" powerline settings
+" airline settings
 let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
 
 " TagBar Settings
 map <C-t> :TagbarToggle<CR>
