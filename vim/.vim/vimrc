@@ -2,7 +2,7 @@ syntax on
 filetype plugin on
 
 set noerrorbells
-set tabstop=4 
+set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
@@ -80,6 +80,12 @@ colorscheme gruvbox
 " airline settings
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#buffers_label = 'BUFFERS'
+let g:airline#extensions#tabline#tabs_label = 'TABS'
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_format = '%s '
 let g:airline_mode_map = {
       \ '__'     : '-',
       \ 'c'      : 'C',
