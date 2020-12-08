@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/php5/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/lance/.oh-my-zsh
