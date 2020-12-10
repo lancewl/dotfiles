@@ -25,7 +25,8 @@ set relativenumber
 " - Hit tab to find:
 set path+=**
 set wildmenu
-set nohlsearch
+set incsearch
+set hlsearch
 
 " For gruvbox
 set termguicolors
@@ -39,7 +40,26 @@ set signcolumn=yes
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=235 guibg=lightgrey
 
-" autocmd BufRead,BufNewFile *.c,*.h setlocal tabstop=2 shiftwidth=2 softtabstop=2
+" User-defined commands must start with a capital letter
+command! RefreshConfig source $MYVIMRC
+
+" Map <Leader> to <Space>
+let mapleader = "\<Space>"
+
+" Faster browsing
+nmap J 5j
+nmap K 5k
+vmap J 5j
+vmap K 5k
+
+"Split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Clear all highlight from search
+nnoremap <Leader><Space> :noh<CR>
 
 call plug#begin('~/.vim/plugged')
 
@@ -62,11 +82,6 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-"split navigations
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 
 " NERDTree auto open
 autocmd StdinReadPre * let s:std_in=1
