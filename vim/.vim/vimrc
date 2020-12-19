@@ -40,6 +40,9 @@ set signcolumn=yes
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=235 guibg=lightgrey
 
+" Disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " User-defined commands must start with a capital letter
 command! RefreshConfig source $MYVIMRC
 
@@ -75,10 +78,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'majutsushi/tagbar'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'Yggdroot/indentLine'
 " Theme plugins
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
+" WebDev
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -127,7 +135,7 @@ let g:airline_mode_map = {
 " TagBar Settings
 map <C-t> :TagbarToggle<CR>
 
-" coc.vim Settings
+" coc-nvim Settings
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -138,6 +146,27 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+nnoremap <leader>d :<C-u>CocList diagnostics<cr>
+nnoremap <leader>s :<C-u>CocList -I symbols<cr>
+nmap <leader>a <Plug>(coc-codeaction)
+nmap <leader>rn <Plug>(coc-rename)
+
+let g:coc_global_extensions = []
+let g:coc_global_extensions += ['coc-clangd']
+let g:coc_global_extensions += ['coc-json']
+let g:coc_global_extensions += ['coc-html']
+let g:coc_global_extensions += ['coc-css']
+let g:coc_global_extensions += ['coc-tsserver']
+let g:coc_global_extensions += ['coc-python']
+
+if executable('prettier')
+    let g:coc_global_extensions += ['coc-prettier']
+    command! -nargs=0 Prettier :CocCommand prettier.formatFile
+endif
 
 " FZF Settings
 nnoremap <silent> <C-p> :Files<CR>

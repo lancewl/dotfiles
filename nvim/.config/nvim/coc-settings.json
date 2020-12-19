@@ -1,0 +1,11 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "css",
+    "json",
+    "javascript",
+    "javascriptreact"
+  ],
+  "coc.preferences.formatOnType": true,
+  "tsserver.formatOnType": true
+}
