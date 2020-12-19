@@ -1,12 +1,9 @@
 syntax on
 filetype plugin on
 
-set noerrorbells
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set expandtab
-set smartindent
+set tabstop=4
+set shiftwidth=4
 set backspace=indent,eol,start
 set nu
 set nowrap
@@ -21,6 +18,7 @@ set fileformat=unix
 set clipboard=unnamed
 set mouse+=a
 set relativenumber
+set noerrorbells
 " Provides tab-completion for all file related tasks
 " - Hit tab to find:
 set path+=**
