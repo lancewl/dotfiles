@@ -55,7 +55,12 @@ SPACESHIP_CHAR_SUFFIX=' '
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pipenv zsh-autosuggestions zsh-nvm zsh-syntax-highlighting)
+plugins=(
+    git
+    pipenv
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -88,12 +93,18 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Pyenv settings
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
 if which pyenv > /dev/null;
   then eval "$(pyenv init -)";
 fi
+
+# NVM (For Node.js) settings
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -104,7 +115,14 @@ source $(dirname $(gem which colorls))/tab_complete.sh
 alias lc='colorls'
 
 if type nvim > /dev/null 2>&1; then
-  alias nv='nvim'
+  alias v='nvim'
+fi
+
+if type tmux > /dev/null 2>&1; then
+    alias t="tmux"
+    alias ta="t a -t"
+    alias tls="t ls"
+    alias tn="t new -t"
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
