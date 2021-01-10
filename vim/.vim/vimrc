@@ -89,9 +89,11 @@ Plug 'mattn/emmet-vim'
 call plug#end()
 
 
-" NERDTree auto open
+" NERDTree settings
 let NERDTreeMinimalUI=1
 let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
@@ -174,3 +176,11 @@ if has('nvim') && !exists('g:fzf_layout')
   autocmd  FileType fzf set laststatus=1 noshowmode noruler
     \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 endif
+
+" Emmet settings
+" Use jsx format in js files
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
