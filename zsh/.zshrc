@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/lance/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -93,14 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Pyenv settings
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-if which pyenv > /dev/null;
-  then eval "$(pyenv init -)";
-fi
-
 # NVM (For Node.js) settings
 export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
@@ -108,16 +100,28 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$(ruby -e 'puts Gem.bindir'):$PATH"
-export PATH="$HOME/Workshop/sdk/flutter/bin:$PATH"
+export PATH="$HOME/Library/Flutter/bin:$PATH"
 
-source $(dirname $(gem which colorls))/tab_complete.sh
-alias lc='colorls'
+# gem & colorls
+if type ruby > /dev/null 2>&1; then
+  export PATH="$(ruby -e 'puts Gem.bindir'):$PATH"
+  source $(dirname $(gem which colorls))/tab_complete.sh
+  alias lc='colorls'
+fi
 
+# Pyenv settings
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if type pyenv > /dev/null 2>&1; then
+  eval "$(pyenv init -)";
+fi
+
+# nvim
 if type nvim > /dev/null 2>&1; then
   alias v='nvim'
 fi
 
+# tmux
 if type tmux > /dev/null 2>&1; then
     alias t="tmux"
     alias ta="t a -t"
@@ -125,6 +129,7 @@ if type tmux > /dev/null 2>&1; then
     alias tn="t new -t"
 fi
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 ctags=/usr/local/bin/ctags
