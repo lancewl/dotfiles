@@ -28,6 +28,7 @@ set hlsearch
 
 " For gruvbox
 set termguicolors
+set background=dark
 
 " For coc.nvim
 set hidden
