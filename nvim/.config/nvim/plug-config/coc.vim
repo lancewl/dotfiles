@@ -12,18 +12,16 @@ endfunction
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
-nnoremap <leader>d :<C-u>CocList diagnostics<cr>
-nnoremap <leader>s :<C-u>CocList -I symbols<cr>
-nmap <leader>a <Plug>(coc-codeaction)
-nmap <leader>rn <Plug>(coc-rename)
 
-let g:coc_global_extensions = []
-let g:coc_global_extensions += ['coc-clangd']
-let g:coc_global_extensions += ['coc-json']
-let g:coc_global_extensions = ['coc-html']
-let g:coc_global_extensions += ['coc-css']
-let g:coc_global_extensions += ['coc-tsserver']
-let g:coc_global_extensions += ['coc-python']
+let g:coc_global_extensions = [
+      \'coc-explorer',
+      \'coc-git',
+      \'coc-python',
+      \'coc-html',
+      \'coc-css',
+      \'coc-json',
+      \'coc-tsserver' 
+      \]
 
 if executable('prettier')
     let g:coc_global_extensions += ['coc-prettier']

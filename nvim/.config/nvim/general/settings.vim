@@ -20,15 +20,14 @@ set clipboard=unnamed
 set mouse+=a
 set relativenumber
 set noerrorbells
+set undodir=$HOME/.config/nvim/undodir
+set undofile
 " Provides tab-completion for all file related tasks
-" - Hit tab to find:
 set path+=**
 set wildmenu
 set incsearch
 set hlsearch
-
 set background=dark
-
 " For coc.nvim
 set hidden
 set updatetime=300
@@ -38,9 +37,6 @@ set signcolumn=yes
 
 " Disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" User-defined commands must start with a capital letter
-command! RefreshConfig source $MYVIMRC
 
 " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 au! BufWritePost $MYVIMRC source % 
