@@ -42,7 +42,17 @@ let g:which_key_map.g = {
       \ 'v' : [':GV'     , 'commit browser'],
       \ }
 
-" s is for search
+" t for terminal
+let g:which_key_map.t = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=split --height=6'        , 'terminal'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ }
+
+" s is search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
       \ '/' : [':History/'     , 'history'],
