@@ -18,32 +18,28 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Single mappings
-let g:which_key_map[' '] = [ ':noh'                       , 'clear highlight' ]
+" let g:which_key_map[' '] = [ ':noh'                       , 'clear highlight' ]
 let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['f'] = [ ':Files'                     , 'fzf' ]
 let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
 let g:which_key_map['i'] = [ ':source $MYVIMRC'           , 'source init.vim']
-let g:which_key_map['r'] = [ ':Ranger'                    , 'ranger' ]
 let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
 let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
 let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
-let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
+let g:which_key_map['z'] = [ ':Goyo'                       , 'zen' ]
+let g:which_key_map['c'] = { 'name': 'which_key_ignore' }
 
 " g for Git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
-      \ 's' : [':Git'         , 'status'],
-      \ 'a' : [':Git add'     , 'add'],
-      \ 'c' : [':Git commit'  , 'commit'],
-      \ 'p' : [':Git push'    , 'push'],
-      \ 'P' : [':Git pull'    , 'pull'],
+      \ 'g' : [':Git'         , 'git status'],
       \ 'd' : [':Git diff'    , 'diff'],
       \ 'D' : [':Gvdiffsplit' , 'diff in split'],
       \ 'l' : [':Git log'     , 'log'],
       \ 'b' : [':Git blame'   , 'blame'],
       \ 'B' : [':GBrowse'     , 'browse in hub'],
-      \ 'r' : [':GRemove'     , 'rm']
+      \ 'v' : [':GV'     , 'commit browser'],
       \ }
 
 " s is for search
