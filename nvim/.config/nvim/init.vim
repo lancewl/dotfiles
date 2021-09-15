@@ -4,7 +4,10 @@ source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/airline.vim
-source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
+source $HOME/.config/nvim/plug-config/lsp-config.vim
+source $HOME/.config/nvim/plug-config/nvim-tree.vim
+luafile $HOME/.config/nvim/lua/plugins/compe-config.lua
+luafile $HOME/.config/nvim/lua/plugins/lsp-language.lua

@@ -36,12 +36,3 @@ set updatetime=300
 set shortmess+=c
 set signcolumn=yes
 " set colorcolumn=80
-
-" Disable automatic comment insertion
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-" auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-au! BufWritePost $MYVIMRC source % 
-
-" You can't stop me
-cmap w!! w !sudo tee %
