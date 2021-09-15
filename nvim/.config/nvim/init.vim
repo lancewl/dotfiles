@@ -10,4 +10,3 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 luafile $HOME/.config/nvim/lua/plugins/compe-config.lua
-luafile $HOME/.config/nvim/lua/plugins/lsp-language.lua
