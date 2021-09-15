@@ -16,7 +16,7 @@ nmap <silent> gr <Plug>(coc-references)
 let g:coc_global_extensions = [
       \'coc-explorer',
       \'coc-git',
-      \'coc-python',
+      \'coc-pyright',
       \'coc-html',
       \'coc-css',
       \'coc-json',
