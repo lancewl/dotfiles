@@ -20,8 +20,8 @@ let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['e'] = [ ':NvimTreeToggle'            , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'fzf' ]
 let g:which_key_map['i'] = [ ':source $MYVIMRC'           , 'source init.vim']
-let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
+let g:which_key_map['s'] = [ ':Startify'                  , 'start screen' ]
+let g:which_key_map['r'] = [ ':Rg'                        , 'rg' ]
 let g:which_key_map['z'] = [ ':Goyo'                       , 'zen' ]
 let g:which_key_map['c'] = { 'name': 'which_key_ignore' }
 
