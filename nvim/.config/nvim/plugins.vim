@@ -18,6 +18,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'liuchengxu/vim-which-key'
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'Pocco81/AutoSave.nvim'
 
 " For Git
 Plug 'tpope/vim-fugitive'
@@ -29,6 +30,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'glepnir/lspsaga.nvim'
 
 " Theme plugins
 Plug 'vim-airline/vim-airline'

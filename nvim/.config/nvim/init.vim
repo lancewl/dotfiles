@@ -9,4 +9,6 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
+source $HOME/.config/nvim/plug-config/lspsaga.vim
+source $HOME/.config/nvim/plug-config/autosave.vim
 luafile $HOME/.config/nvim/plug-config/compe-config.lua
