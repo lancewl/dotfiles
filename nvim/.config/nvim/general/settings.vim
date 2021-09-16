@@ -31,3 +31,5 @@ set hlsearch
 set background=dark
 " set colorcolumn=80
 set timeoutlen=300
+set noshowmode
+set noshowcmd
