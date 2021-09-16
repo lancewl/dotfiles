@@ -1,11 +1,12 @@
-source $HOME/.config/nvim/vim-plug/plugins.vim
+source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
-source $HOME/.config/nvim/keys/mappings.vim
-source $HOME/.config/nvim/keys/which-key.vim
+source $HOME/.config/nvim/general/mappings.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 source $HOME/.config/nvim/themes/airline.vim
+source $HOME/.config/nvim/plug-config/which-key.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
-luafile $HOME/.config/nvim/lua/plugins/compe-config.lua
+source $HOME/.config/nvim/plug-config/treesitter.vim
+luafile $HOME/.config/nvim/plug-config/compe-config.lua
