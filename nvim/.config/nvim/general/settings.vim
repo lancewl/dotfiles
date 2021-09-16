@@ -2,8 +2,6 @@
 let g:mapleader = "\<Space>"
 
 syntax on
-filetype plugin on
-
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -30,9 +28,5 @@ set wildmenu
 set incsearch
 set hlsearch
 set background=dark
-" For coc.nvim
-set hidden
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
 " set colorcolumn=80
+set timeoutlen=300
