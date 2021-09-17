@@ -31,7 +31,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'glepnir/lspsaga.nvim'
+Plug 'jasonrhansen/lspsaga.nvim', {'branch': 'finder-preview-fixes'}
 
 " Theme plugins
 Plug 'vim-airline/vim-airline'
