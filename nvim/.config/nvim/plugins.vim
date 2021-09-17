@@ -19,6 +19,7 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'Pocco81/AutoSave.nvim'
+Plug 'mhinz/vim-startify'
 
 " For Git
 Plug 'tpope/vim-fugitive'

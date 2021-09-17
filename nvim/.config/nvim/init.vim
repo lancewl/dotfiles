@@ -11,4 +11,5 @@ source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/lspsaga.vim
 source $HOME/.config/nvim/plug-config/autosave.vim
+source $HOME/.config/nvim/plug-config/start-screen.vim
 luafile $HOME/.config/nvim/plug-config/compe-config.lua
