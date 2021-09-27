@@ -3,6 +3,16 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 
+autocmd CursorHold  * lua vim.lsp.buf.document_highlight()
+autocmd CursorHoldI * lua vim.lsp.buf.document_highlight()
+autocmd CursorMoved * lua vim.lsp.buf.clear_references()
+
+" References to the same variable
+highlight LspReference guifg=NONE guibg=#665c54 guisp=NONE gui=NONE cterm=NONE ctermfg=NONE ctermbg=59
+highlight! link LspReferenceText LspReference
+highlight! link LspReferenceRead LspReference
+highlight! link LspReferenceWrite LspReference
+
 " auto-format
 autocmd BufWritePre *.js lua vim.lsp.buf.formatting_sync(nil, 100)
 autocmd BufWritePre *.jsx lua vim.lsp.buf.formatting_sync(nil, 100)

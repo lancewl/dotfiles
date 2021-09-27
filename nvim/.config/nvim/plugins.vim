@@ -20,6 +20,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'mhinz/vim-startify'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
 " For Git
 Plug 'tpope/vim-fugitive'
@@ -31,7 +32,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'jasonrhansen/lspsaga.nvim', {'branch': 'finder-preview-fixes'}
+Plug 'tami5/lspsaga.nvim'
 
 " Theme plugins
 Plug 'vim-airline/vim-airline'
