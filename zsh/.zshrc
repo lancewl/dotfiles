@@ -1,7 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export SHELL=/usr/bin/zsh
+if [[ `uname` == "Darwin" ]]; then
+    export SHELL=/usr/local/bin/zsh
+else
+    export SHELL=/usr/bin/zsh
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
