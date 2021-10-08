@@ -25,11 +25,7 @@ local nvim_lsp = require('lspconfig')
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {
-    flags = {
-      debounce_text_changes = 150,
-    }
-  }
+  nvim_lsp[lsp].setup {}
 
 local protocol = require'vim.lsp.protocol'
 protocol.CompletionItemKind = {

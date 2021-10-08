@@ -12,5 +12,6 @@ source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/lspsaga.vim
 source $HOME/.config/nvim/plug-config/autosave.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
+source $HOME/.config/nvim/plug-config/nvim-lint.vim
 source $HOME/.config/nvim/plug-config/fix-cursorhold.vim
 luafile $HOME/.config/nvim/plug-config/compe-config.lua
