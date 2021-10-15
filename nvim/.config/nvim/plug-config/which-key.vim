@@ -16,7 +16,6 @@ autocmd  FileType which_key set laststatus=0 noruler
 
 " Single mappings
 " let g:which_key_map[' '] = [ ':noh'                       , 'clear highlight' ]
-let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
 let g:which_key_map['e'] = [ ':NvimTreeToggle'            , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'fzf' ]
 let g:which_key_map['i'] = [ ':source $MYVIMRC'           , 'init.vim']
@@ -35,7 +34,6 @@ let g:which_key_map.g = {
       \ 'l' : [':Git log'                   , 'log'],
       \ 'b' : [':Git blame'                 , 'blame'],
       \ 'B' : [':GBrowse'                   , 'browse in hub'],
-      \ 'v' : [':GV'                        ,'commit browser'],
       \ }
 
 " w for window
