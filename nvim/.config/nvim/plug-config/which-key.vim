@@ -15,7 +15,6 @@ autocmd  FileType which_key set laststatus=0 noruler
   \| autocmd BufLeave <buffer> set laststatus=2 ruler
 
 " Single mappings
-" let g:which_key_map[' '] = [ ':noh'                       , 'clear highlight' ]
 let g:which_key_map['e'] = [ ':NvimTreeToggle'            , 'explorer' ]
 let g:which_key_map['f'] = [ ':Files'                     , 'fzf' ]
 let g:which_key_map['i'] = [ ':source $MYVIMRC'           , 'init.vim']
@@ -55,13 +54,26 @@ let g:which_key_map.t = {
 " b for buffer
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
-      \ 'd' : ['bd'        , 'delete-buffer']   ,
-      \ 'f' : ['bfirst'    , 'first-buffer']    ,
-      \ 'h' : ['Startify'  , 'home-buffer']     ,
-      \ 'l' : ['blast'     , 'last-buffer']     ,
-      \ 'n' : ['bnext'     , 'next-buffer']     ,
-      \ 'p' : ['bprevious' , 'previous-buffer'] ,
-      \ '?' : ['Buffers'   , 'fzf-buffer']      ,
+      \ 'd' : ['bd'        , 'delete-buffer'],
+      \ 'f' : ['bfirst'    , 'first-buffer'],
+      \ 'h' : ['Startify'  , 'home-buffer'],
+      \ 'l' : ['blast'     , 'last-buffer'],
+      \ 'n' : ['bnext'     , 'next-buffer'],
+      \ 'p' : ['bprevious' , 'previous-buffer'],
+      \ '?' : ['Buffers'   , 'fzf-buffer'],
+      \ }
+
+" d for debugger
+let g:which_key_map.d = {
+      \ 'name' : '+debugger' ,
+      \ 'd' : [':call vimspector#Launch()'              , 'launch debugger'],
+      \ 'e' : [':call vimspector#Reset()'               , 'close debugger'],
+      \ 'r' : [':call vimspector#Restart()'             , 'restart debugger'],
+      \ 'j' : [':call vimspector#StepOver()'            , 'step over'],
+      \ 'h' : [':call vimspector#StepOut()'             , 'step out'],
+      \ 'l' : [':call vimspector#StepInto()'            , 'step into'],
+      \ ' ' : [':call vimspector#Continue()'            , 'continue'],
+      \ 'b' : [':call vimspector#ToggleBreakpoint()'    , 'break point'],
       \ }
 
 " Register which key map

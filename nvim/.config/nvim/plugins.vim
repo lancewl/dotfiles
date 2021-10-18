@@ -26,6 +26,7 @@ Plug 'Pocco81/AutoSave.nvim'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/vim-peekaboo'
 Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'puremourning/vimspector'
 
 " For Git
 Plug 'tpope/vim-fugitive'
