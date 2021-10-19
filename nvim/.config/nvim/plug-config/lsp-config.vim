@@ -21,6 +21,13 @@ autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
+-- Sort the signs in gutter by the severity --
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        severity_sort = true
+    }
+)
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright' }
