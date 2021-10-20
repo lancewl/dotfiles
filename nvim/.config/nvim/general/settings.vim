@@ -30,4 +30,3 @@ set encoding=utf-8              " UTF-8 encoding
 set fileformat=unix             " File EOL setting
 set undofile                    " Setup persistent undo history
 set undodir=$HOME/.config/nvim/undodir  " Directory for undo history
-set signcolumn=auto:2 
