@@ -8,26 +8,26 @@ wk.setup{
     ["<tab>"] = "TAB",
   },
   layout = {
-    spacing = 10, -- spacing between columns
+    spacing = 8, -- spacing between columns
   },
 }
 
 wk.register({
   ["<leader>"] = {
-    e = { "<cmd>NvimTreeToggle<cr>", "File Explorer" },
-    f = { "<cmd>Files<cr>", "Fuzzy Finder" },
+    e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    f = { "<cmd>Files<cr>", "FZF" },
     r = { "<cmd>Files<cr>", "Rg" },
-    s = { "<cmd>Startify<cr>", "Start Screen" },
-    i = { "<cmd>source $MYVIMRC<cr>", "Source init.vim" },
-    z = { "<cmd>Goyo<cr>", "Zen Mode" },
-    c = { "<cmd>bd<cr>", "Close Buffer" },
-    ["<space>"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
+    s = { "<cmd>Startify<cr>", "Startify" },
+    i = { "<cmd>source $MYVIMRC<cr>", "init.vim" },
+    z = { "<cmd>Goyo<cr>", "Zen" },
+    c = { "<cmd>bd<cr>", "Close buffer" },
+    ["<space>"] = { "<cmd>nohlsearch<cr>", "noh" },
   },
 })
 
 wk.register({
   ["<leader>w"] = {
-    name = "+window",
+    name = "+Window",
     j = { "<C-W>s", "Split below" },
     l = { "<C-W>v", "Split right" },
   },
@@ -35,7 +35,7 @@ wk.register({
 
 wk.register({
   ["<leader>g"] = {
-    name = "+git",
+    name = "+Git",
     g = { "<cmd>FloatermNew lazygit<cr>", "lazygit" },
     d = { "<cmd>Git diff<cr>", "Git Diff" },
     D = { "<cmd>Gvdiffsplit<cr>", "Git Diff in split" },
@@ -47,7 +47,7 @@ wk.register({
 
 wk.register({
   ["<leader>t"] = {
-    name = "+terminal",
+    name = "+Terminal",
     [";"] = { "<cmd>FloatermNew --wintype=split --height=6<cr>", "Terminal" },
     n = { "<cmd>FloatermNew node<cr>", "Node" },
     p = { "<cmd>FloatermNew python<cr>", "Python" },
@@ -57,7 +57,7 @@ wk.register({
 
 wk.register({
   ["<leader>d"] = {
-    name = "+debugger",
+    name = "+Debug",
     d = { "<cmd>call vimspector#Launch()<cr>", "Launch" },
     e = { "<cmd>call vimspector#Reset()<cr>", "Close" },
     r = { "<cmd>call vimspector#Restart()<cr>", "Restart" },
