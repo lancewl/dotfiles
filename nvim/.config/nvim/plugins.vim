@@ -8,8 +8,10 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 " Theme plugins
 Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'kyazdani42/nvim-web-devicons' " for file icons
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'shadmansaleh/lualine.nvim'
+Plug 'akinsho/bufferline.nvim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -33,8 +35,6 @@ Plug 'tpope/vim-rhubarb'
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
-Plug 'kyazdani42/nvim-web-devicons' " for file icons
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'tami5/lspsaga.nvim'
 Plug 'mfussenegger/nvim-lint'
 
