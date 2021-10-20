@@ -3,7 +3,7 @@ let g:mapleader = "\<Space>"
 
 syntax on                       " Enables syntax highlighing
 set hidden                      " Hide unsaved buffers instead of close them
-set number                      " Line number
+set nonumber                      " Line number
 set relativenumber              " Reletive line number
 set incsearch                   " Searching when you're typing
 set hlsearch                    " Highlight search pattern

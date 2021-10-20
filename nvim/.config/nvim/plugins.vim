@@ -2,8 +2,7 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  "autocmd VimEnter * PlugInstall
-  "autocmd VimEnter * PlugInstall | source $MYVIMRC
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -19,12 +18,11 @@ Plug 'b3nj5m1n/kommentary'
 Plug 'Yggdroot/indentLine'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'voldikss/vim-floaterm'
-Plug 'liuchengxu/vim-which-key'
+Plug 'folke/which-key.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'Pocco81/AutoSave.nvim'
 Plug 'mhinz/vim-startify'
-Plug 'junegunn/vim-peekaboo'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'puremourning/vimspector'
 

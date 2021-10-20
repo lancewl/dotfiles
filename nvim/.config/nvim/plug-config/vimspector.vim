@@ -1,5 +1,3 @@
-nmap <leader>dcb <Plug>VimspectorToggleConditionalBreakpoint
-
 sign define vimspectorBP            text=●   texthl=WarningMsg
 sign define vimspectorBPCond        text=◆   texthl=WarningMsg
 sign define vimspectorBPLog         text=◆   texthl=SpellRare
