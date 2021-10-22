@@ -22,7 +22,7 @@ wk.register({
   ["<leader>"] = {
     e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     f = { "<cmd>Files<cr>", "FZF" },
-    r = { "<cmd>Files<cr>", "Rg" },
+    r = { "<cmd>Rg<cr>", "Rg" },
     s = { "<cmd>Startify<cr>", "Startify" },
     i = { "<cmd>source $MYVIMRC<cr>", "init.vim" },
     z = { "<cmd>Goyo<cr>", "Zen" },
