@@ -10,7 +10,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
-Plug 'shadmansaleh/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'akinsho/bufferline.nvim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

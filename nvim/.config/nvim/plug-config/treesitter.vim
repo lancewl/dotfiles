@@ -14,6 +14,8 @@ require'nvim-treesitter.configs'.setup {
     "json",
     "yaml",
     "html",
+    "lua",
+    "vim"
   },
 }
 
