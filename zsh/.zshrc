@@ -2,9 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 if [[ `uname` == "Darwin" ]]; then
+    # MacOS
     export SHELL=/usr/local/bin/zsh
+    export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
+    export PATH="/usr/local/opt/ruby/bin:$PATH"
+    export PATH="$HOME/Library/Flutter/bin:$PATH"
 else
     export SHELL=/usr/bin/zsh
+    export PATH="/usr/local/go/bin:$PATH"
 fi
 
 # Path to your oh-my-zsh installation.
@@ -76,10 +81,6 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/etc/bash_completion.d/nvm" ] && . "$NVM_DIR/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export PATH="$HOME/Library/Flutter/bin:$PATH"
 
 # gem & colorls
 if type ruby > /dev/null 2>&1; then
