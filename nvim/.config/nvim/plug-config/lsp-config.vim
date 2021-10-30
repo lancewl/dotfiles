@@ -28,6 +28,32 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
+local pylint = {
+    lintCommand = 'pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}',
+    lintStdin = false,
+    lintFormats = {'%f:%l:%c:%t:%m'},
+    lintOffsetColumns = 1,
+    lintCategoryMap = {
+        I = 'H',
+        R = 'I',
+        C = 'I',
+        W = 'W',
+        E = 'E',
+        F = 'E',
+    }
+}
+
+nvim_lsp['efm'].setup {
+    init_options = {documentFormatting = true},
+    settings = {
+        rootMarkers = {".git/"},
+        languages = {
+            python = { pylint }
+        }
+    },
+    filetypes = { 'python','cpp','lua' }
+}
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright' }

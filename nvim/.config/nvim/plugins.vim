@@ -36,6 +36,5 @@ Plug 'tpope/vim-rhubarb'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'tami5/lspsaga.nvim'
-Plug 'mfussenegger/nvim-lint'
 
 call plug#end()
