@@ -10,6 +10,7 @@ if [[ `uname` == "Darwin" ]]; then
 else
     export SHELL=/usr/bin/zsh
     export PATH="/usr/local/go/bin:$PATH"
+    export PATH="$HOME/go/bin:$PATH"
 fi
 
 # Path to your oh-my-zsh installation.
