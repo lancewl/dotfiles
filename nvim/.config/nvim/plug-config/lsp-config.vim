@@ -22,12 +22,13 @@ lua << EOF
 local nvim_lsp = require('lspconfig')
 
 -- Sort the signs in gutter by the severity --
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-        severity_sort = true
-    }
-)
+-- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+--     vim.lsp.diagnostic.on_publish_diagnostics, {
+--         severity_sort = true
+--     }
+-- )
 
+-- efm language server settings
 local pylint = {
     lintCommand = 'pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}',
     lintStdin = false,
@@ -51,7 +52,7 @@ nvim_lsp['efm'].setup {
             python = { pylint }
         }
     },
-    filetypes = { 'python','cpp','lua' }
+    filetypes = { 'python' }
 }
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
