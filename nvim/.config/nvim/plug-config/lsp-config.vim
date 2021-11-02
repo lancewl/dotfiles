@@ -52,6 +52,9 @@ nvim_lsp['efm'].setup {
             python = { pylint }
         }
     },
+    flags = {
+      debounce_text_changes = 500,
+    },
     filetypes = { 'python' }
 }
 
@@ -59,7 +62,11 @@ nvim_lsp['efm'].setup {
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup {}
+  nvim_lsp[lsp].setup {
+    flags = {
+      debounce_text_changes = 500,
+    }
+  }
 
 local protocol = require'vim.lsp.protocol'
 protocol.CompletionItemKind = {
