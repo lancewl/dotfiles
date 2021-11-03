@@ -8,7 +8,7 @@ autocmd CursorHoldI * lua vim.lsp.buf.document_highlight()
 autocmd CursorMoved * lua vim.lsp.buf.clear_references()
 
 " References to the same variable
-highlight LspReference guifg=NONE guibg=#665c54 guisp=NONE gui=NONE cterm=NONE ctermfg=NONE ctermbg=59
+highlight LspReference guifg=NONE guibg=#434C5E guisp=NONE gui=NONE cterm=NONE ctermfg=NONE ctermbg=59
 highlight! link LspReferenceText LspReference
 highlight! link LspReferenceRead LspReference
 highlight! link LspReferenceWrite LspReference
