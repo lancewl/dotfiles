@@ -28,5 +28,12 @@ set noerrorbells                " Disable error bell sound
 set timeoutlen=500              " Waiting for each keystroke of the mappings
 set encoding=utf-8              " UTF-8 encoding
 set fileformat=unix             " File EOL setting
+set noswapfile                  " No swap file"
 set undofile                    " Setup persistent undo history
 set undodir=$HOME/.config/nvim/undodir  " Directory for undo history
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
