@@ -21,12 +21,12 @@ autocmd BufWritePre *.py lua vim.lsp.buf.formatting_sync(nil, 100)
 lua << EOF
 local nvim_lsp = require('lspconfig')
 
--- Sort the signs in gutter by the severity --
--- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
---     vim.lsp.diagnostic.on_publish_diagnostics, {
---         severity_sort = true
---     }
--- )
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+    vim.lsp.diagnostic.on_publish_diagnostics, {
+        severity_sort = true, -- Sort the signs in gutter by the severity --
+        update_in_insert = false
+    }
+)
 
 -- efm language server settings
 local pylint = {
@@ -48,6 +48,7 @@ nvim_lsp['efm'].setup {
     init_options = {documentFormatting = true},
     settings = {
         rootMarkers = {".git/"},
+        -- lintDebounce = 1000000000,
         languages = {
             python = { pylint }
         }
