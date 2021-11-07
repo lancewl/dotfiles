@@ -21,10 +21,8 @@ wk.setup{
 wk.register({
   ["<leader>"] = {
     e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-    f = { "<cmd>Files<cr>", "FZF" },
-    r = { "<cmd>Rg<cr>", "Rg" },
     s = { "<cmd>Startify<cr>", "Startify" },
-    i = { "<cmd>source $MYVIMRC<cr>", "init.vim" },
+    r = { "<cmd>source $MYVIMRC<cr>", "Reload init.vim" },
     z = { "<cmd>Goyo<cr>", "Zen" },
     c = { "<cmd>bd<cr>", "Close buffer" },
     ["<space>"] = { "<cmd>nohlsearch<cr>", "noh" },
@@ -73,5 +71,26 @@ wk.register({
     ["<space>"] = { "<cmd>call vimspector#Continue()<cr>", "Continue" },
     ["b"] = { "<cmd>call vimspector#ToggleBreakpoint()<cr>", "Break Point" },
     ["cb"] = { "<cmd><Plug>VimspectorToggleConditionalBreakpoint<cr>", "Condition BP" },
+  },
+})
+
+wk.register({
+  ["<leader>p"] = {
+    name = "+Plugin",
+    i = { "<cmd>PlugInstall<cr>", "Install" },
+    u = { "<cmd>PlugUpdate<cr>", "Update" },
+    U = { "<cmd>PlugUpgrade<cr>", "Upgrade" },
+    c = { "<cmd>PlugClean<cr>", "Clean" },
+  },
+})
+
+wk.register({
+  ["<leader>f"] = {
+    name = "+File",
+    f = { "<cmd>Telescope find_files<cr>", "Find files" },
+    g = { "<cmd>Telescope live_grep<cr>", "Ripgrep" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
+    z = { "<cmd>Files<cr>", "FZF" },
   },
 })
