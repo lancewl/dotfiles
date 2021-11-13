@@ -16,14 +16,14 @@ require'compe'.setup {
 
   source = {
     path = true;
-    buffer = true;
-    calc = true;
+    buffer = false;
+    calc = false;
     nvim_lsp = true;
-    nvim_lua = true;
-    spell = true;
-    tags = true;
-    snippets_nvim = true;
-    treesitter = true;
+    nvim_lua = false;
+    spell = false;
+    tags = false;
+    snippets_nvim = false;
+    treesitter = false;
   };
 }
 

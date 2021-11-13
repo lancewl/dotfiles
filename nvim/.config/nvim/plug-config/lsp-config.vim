@@ -48,7 +48,7 @@ nvim_lsp['efm'].setup {
     init_options = {documentFormatting = true},
     settings = {
         rootMarkers = {".git/"},
-        -- lintDebounce = 1000000000,
+        lintDebounce = 1000000000,
         languages = {
             python = { pylint }
         }
