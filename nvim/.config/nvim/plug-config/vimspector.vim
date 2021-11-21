@@ -1,5 +1,5 @@
-sign define vimspectorBP            text=●   texthl=WarningMsg
-sign define vimspectorBPCond        text=◆   texthl=WarningMsg
+sign define vimspectorBP            text=●   texthl=DignosticError
+sign define vimspectorBPCond        text=◆   texthl=DignosticError
 sign define vimspectorBPLog         text=◆   texthl=SpellRare
 sign define vimspectorBPDisabled    text=●   texthl=LineNr
 sign define vimspectorPC            text=▶   texthl=MatchParen linehl=CursorLine
