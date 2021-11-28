@@ -29,6 +29,7 @@ Plug 'mhinz/vim-startify'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'puremourning/vimspector'
 Plug 'ThePrimeagen/harpoon'
+Plug 'tpope/vim-surround'
 
 " For Git
 Plug 'tpope/vim-fugitive'

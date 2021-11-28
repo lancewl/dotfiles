@@ -1,6 +1,14 @@
 lua << EOF
 local saga = require 'lspsaga'
 
+saga.setup {
+  -- diagnostic sign
+  error_sign = "▊",
+  warn_sign = "▊",
+  hint_sign = "▊",
+  infor_sign = "▊",
+}
+
 saga.init_lsp_saga()
 EOF
 
