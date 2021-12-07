@@ -37,3 +37,6 @@ if (has("termguicolors"))
     set termguicolors
     hi LineNr ctermbg=NONE guibg=NONE
 endif
+
+" Get syntax highlighting for Jenkinsfile
+au BufNewFile,BufRead Jenkinsfile setf groovy

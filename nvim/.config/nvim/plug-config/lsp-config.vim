@@ -28,40 +28,15 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
--- efm language server settings
-local pylint = {
-    lintCommand = 'pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}',
-    lintStdin = false,
-    lintFormats = {'%f:%l:%c:%t:%m'},
-    lintOffsetColumns = 1,
-    lintCategoryMap = {
-        I = 'H',
-        R = 'I',
-        C = 'I',
-        W = 'W',
-        E = 'E',
-        F = 'E',
-    }
-}
-
-nvim_lsp['efm'].setup {
-    init_options = {documentFormatting = true},
-    settings = {
-        rootMarkers = {".git/"},
-        -- lintDebounce = 1000000000,
-        languages = {
-            python = { pylint }
-        }
+require("null-ls").config({
+    sources = {
+        require("null-ls").builtins.diagnostics.pylint,
     },
-    flags = {
-      debounce_text_changes = 500,
-    },
-    filetypes = { 'python' }
-}
+})
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright' }
+local servers = { 'pyright', 'null-ls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     flags = {
