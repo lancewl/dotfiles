@@ -31,6 +31,8 @@ set fileformat=unix             " File EOL setting
 set noswapfile                  " No swap file"
 set undofile                    " Setup persistent undo history
 set undodir=$HOME/.config/nvim/undodir  " Directory for undo history
+set spelllang=en,cjk            " Setup spell checking languages, CJK is used to exclude east asian char
+set spellsuggest=best,9         " Show nine spell checking candidates at most
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))

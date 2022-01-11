@@ -28,15 +28,19 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     }
 )
 
-require("null-ls").config({
+-- Setup null-ls for linters
+require("null-ls").setup({
     sources = {
         require("null-ls").builtins.diagnostics.pylint,
     },
+    default_timeout = 15000,
+    debounce = 500,
+    debug = true
 })
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'null-ls' }
+local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     flags = {

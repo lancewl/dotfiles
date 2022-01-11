@@ -21,7 +21,8 @@ wk.setup{
 wk.register({
   ["<leader>"] = {
     e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-    s = { "<cmd>Startify<cr>", "Startify" },
+    s = { "<cmd>set spell!<cr>", "Spell check" },
+    S = { "<cmd>Startify<cr>", "Startify" },
     r = { "<cmd>source $MYVIMRC<cr>", "Reload init.vim" },
     z = { "<cmd>Goyo<cr>", "Zen" },
     c = { "<cmd>bd<cr>", "Close buffer" },
