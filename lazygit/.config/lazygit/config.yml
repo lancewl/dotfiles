@@ -1,4 +1,4 @@
-gui:
+gucomplete i:
   theme:
     selectedLineBgColor:
       - reverse
