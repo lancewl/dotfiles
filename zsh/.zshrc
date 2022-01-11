@@ -71,7 +71,7 @@ SPACESHIP_VENV_SUFFIX=') '
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    pipenv
+    autoenv
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -112,3 +112,10 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Autoenv
+if [ ! -d ~/.autoenv ]
+then
+    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
+fi
+source ~/.autoenv/activate.sh
