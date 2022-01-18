@@ -24,3 +24,12 @@ nnoremap <silent> gk <cmd>Lspsaga diagnostic_jump_prev<CR>
 
 nnoremap <silent> <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
 nnoremap <silent> <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
+highlight link TargetWord Function
+highlight link ReferencesCount Function
+highlight link ReferencesIcon Todo
+highlight link DefinitionCount Function
+highlight link DefinitionIcon Todo
+highlight link LspSagaFinderSelection String
+highlight link LspSagaLspFinderBorder Function
+highlight link LspSagaAutoPreview Function
