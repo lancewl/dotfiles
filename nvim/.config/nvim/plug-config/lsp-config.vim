@@ -3,10 +3,6 @@ nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
 nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
 
-autocmd CursorHold  * lua vim.lsp.buf.document_highlight()
-autocmd CursorHoldI * lua vim.lsp.buf.document_highlight()
-autocmd CursorMoved * lua vim.lsp.buf.clear_references()
-
 " References to the same variable
 highlight LspReference guifg=NONE guibg=#434C5E guisp=NONE gui=NONE cterm=NONE ctermfg=NONE ctermbg=59
 highlight! link LspReferenceText LspReference
@@ -38,6 +34,20 @@ require("null-ls").setup({
     debug = true
 })
 
+local function on_attach(client, bufnr)
+    -- Find the clients capabilities
+    local cap = client.resolved_capabilities
+
+    -- Only highlight if compatible with the language
+    if cap.document_highlight then
+        vim.cmd('augroup LspHighlight')
+        vim.cmd('autocmd!')
+        vim.cmd('autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()')
+        vim.cmd('autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()')
+        vim.cmd('augroup END')
+    end
+end
+
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
 local servers = { 'pyright' }
@@ -45,7 +55,8 @@ for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     flags = {
       debounce_text_changes = 500,
-    }
+    },
+    on_attach = on_attach
   }
 
 local protocol = require'vim.lsp.protocol'
