@@ -28,10 +28,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 require("null-ls").setup({
     sources = {
         require("null-ls").builtins.diagnostics.pylint,
+        require("null-ls").builtins.formatting.black,
     },
     default_timeout = 15000,
     debounce = 500,
-    debug = true
+    debug = false,
 })
 
 local function on_attach(client, bufnr)
