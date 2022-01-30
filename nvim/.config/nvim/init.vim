@@ -16,3 +16,4 @@ source $HOME/.config/nvim/plug-config/fix-cursorhold.vim
 luafile $HOME/.config/nvim/plug-config/which-key.lua
 luafile $HOME/.config/nvim/plug-config/compe-config.lua
 luafile $HOME/.config/nvim/plug-config/nvim-autopairs.lua
+luafile $HOME/.config/nvim/plug-config/hop.lua

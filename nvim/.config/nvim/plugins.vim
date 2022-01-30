@@ -30,6 +30,7 @@ Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'puremourning/vimspector'
 Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
+Plug 'phaazon/hop.nvim'
 
 " For Git
 Plug 'tpope/vim-fugitive'
