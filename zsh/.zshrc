@@ -10,7 +10,6 @@ if [[ `uname` == "Darwin" ]]; then
 else
     export SHELL=/usr/bin/zsh
     export PATH="/usr/local/go/bin:$PATH"
-    export PATH="$HOME/go/bin:$PATH"
 fi
 
 # Path to your oh-my-zsh installation.
@@ -96,6 +95,9 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 if type pyenv > /dev/null 2>&1; then
   eval "$(pyenv init --path)";
 fi
+
+# Go settings
+export PATH="$HOME/go/bin:$PATH"
 
 # Neovim
 if type nvim > /dev/null 2>&1; then
