@@ -97,6 +97,16 @@ wk.register({
 })
 
 wk.register({
+  ["<leader>l"] = {
+    name = "+Lsp",
+    i = { "<cmd>LspInfo<cr>", "Lsp Info" },
+    s = { "<cmd>LspStart<cr>", "Lsp Start" },
+    r = { "<cmd>LspRestart<cr>", "Lsp Restart" },
+    t = { "<cmd>LspStop<cr>", "Lsp Stop" },
+  },
+})
+
+wk.register({
   ["<leader>h"] = {
     name = "+Harpoon",
     h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle menu" },
