@@ -78,6 +78,10 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # NVM (For Node.js) settings
+if [ ! -d ~/.nvm ]
+then
+    git clone https://github.com/nvm-sh/nvm.git .nvm
+fi
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/etc/bash_completion.d/nvm" ] && . "$NVM_DIR/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
