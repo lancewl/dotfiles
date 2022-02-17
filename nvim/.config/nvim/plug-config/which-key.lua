@@ -26,6 +26,7 @@ wk.register({
     r = { "<cmd>source $MYVIMRC<cr>", "Reload init.vim" },
     z = { "<cmd>Goyo<cr>", "Zen" },
     c = { "<cmd>bd<cr>", "Close buffer" },
+    b = { "<cmd>set wrap!<cr><cmd>set linebreak!<cr>", "Line wrapping"},
     ["<space>"] = { "<cmd>nohlsearch<cr>", "noh" },
   },
 })
