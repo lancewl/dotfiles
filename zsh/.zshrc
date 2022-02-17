@@ -3,11 +3,14 @@
 
 if [[ `uname` == "Darwin" ]]; then
     # MacOS
-    export SHELL=/usr/local/bin/zsh
-    export PATH="/usr/local/opt/mongodb@3.4/bin:$PATH"
-    export PATH="/usr/local/opt/ruby/bin:$PATH"
-    export PATH="$HOME/Library/Flutter/bin:$PATH"
+    if [[ "$(uname -m)" == "arm64" ]]; then
+        # M1 Mac
+        export SHELL="/opt/homebrew/bin/zsh"
+    else
+        export SHELL="/usr/local/bin/zsh"
+    fi
 else
+    # Linux
     export SHELL=/usr/bin/zsh
     export PATH="/usr/local/go/bin:$PATH"
 fi
@@ -80,7 +83,7 @@ source $ZSH/oh-my-zsh.sh
 # NVM (For Node.js) settings
 if [ ! -d ~/.nvm ]
 then
-    git clone https://github.com/nvm-sh/nvm.git .nvm
+    git clone https://github.com/nvm-sh/nvm.git ~/.nvm
 fi
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
