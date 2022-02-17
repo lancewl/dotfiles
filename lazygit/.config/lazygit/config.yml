@@ -1,6 +1,1 @@
-gucomplete i:
-  theme:
-    selectedLineBgColor:
-      - reverse
-    selectedRangeBgColor:
-      - reverse
+quitOnTopLevelReturn: true

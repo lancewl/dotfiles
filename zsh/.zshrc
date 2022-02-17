@@ -128,3 +128,6 @@ then
     git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
 fi
 source ~/.autoenv/activate.sh
+
+# Lazygit
+export LG_CONFIG_FILE=~/.config/lazygit/config.yml
