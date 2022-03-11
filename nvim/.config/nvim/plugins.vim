@@ -43,5 +43,6 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'tami5/lspsaga.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
+Plug 'j-hui/fidget.nvim'
 
 call plug#end()

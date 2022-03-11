@@ -33,6 +33,16 @@ require("null-ls").setup({
     default_timeout = 15000,
     debounce = 500,
     debug = false,
+    on_attach = function(client)
+        if client.resolved_capabilities.document_formatting then
+            vim.cmd([[
+            augroup LspFormatting
+                autocmd! * <buffer>
+                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+            augroup END
+            ]])
+        end
+    end,
 })
 
 local function on_attach(client, bufnr)
@@ -59,6 +69,7 @@ for _, lsp in ipairs(servers) do
     },
     on_attach = on_attach
   }
+end
 
 local protocol = require'vim.lsp.protocol'
 protocol.CompletionItemKind = {
@@ -88,5 +99,7 @@ protocol.CompletionItemKind = {
     'ﬦ', -- Operator
     '', -- TypeParameter
 }
-end
+
+-- Load fidget for nvim-lsp progress --
+require"fidget".setup{}
 EOF
