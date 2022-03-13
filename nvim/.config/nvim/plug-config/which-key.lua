@@ -104,6 +104,7 @@ wk.register({
     s = { "<cmd>LspStart<cr>", "Lsp Start" },
     r = { "<cmd>LspRestart<cr>", "Lsp Restart" },
     t = { "<cmd>LspStop<cr>", "Lsp Stop" },
+    f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Lsp Format"}
   },
 })
 

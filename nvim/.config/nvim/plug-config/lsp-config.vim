@@ -33,16 +33,16 @@ require("null-ls").setup({
     default_timeout = 15000,
     debounce = 500,
     debug = false,
-    on_attach = function(client)
-        if client.resolved_capabilities.document_formatting then
-            vim.cmd([[
-            augroup LspFormatting
-                autocmd! * <buffer>
-                autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-            augroup END
-            ]])
-        end
-    end,
+    -- on_attach = function(client)
+    --     if client.resolved_capabilities.document_formatting then
+    --         vim.cmd([[
+    --         augroup LspFormatting
+    --            autocmd! * <buffer>
+    --             autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+    --         augroup END
+    --         ]])
+    --     end
+    -- end,
 })
 
 local function on_attach(client, bufnr)
@@ -61,44 +61,17 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     flags = {
       debounce_text_changes = 500,
     },
-    on_attach = on_attach
+    on_attach = on_attach,
+    capabilities = capabilities,
   }
 end
-
-local protocol = require'vim.lsp.protocol'
-protocol.CompletionItemKind = {
-    '', -- Text
-    '', -- Method
-    '', -- Function
-    '', -- Constructor
-    '', -- Field
-    '', -- Variable
-    '', -- Class
-    'ﰮ', -- Interface
-    '', -- Module
-    '', -- Property
-    '', -- Unit
-    '', -- Value
-    '', -- Enum
-    '', -- Keyword
-    '﬌', -- Snippet
-    '', -- Color
-    '', -- File
-    '', -- Reference
-    '', -- Folder
-    '', -- EnumMember
-    '', -- Constant
-    '', -- Struct
-    '', -- Event
-    'ﬦ', -- Operator
-    '', -- TypeParameter
-}
 
 -- Load fidget for nvim-lsp progress --
 require"fidget".setup{}
