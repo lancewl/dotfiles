@@ -89,7 +89,7 @@ wk.register({
 wk.register({
   ["<leader>f"] = {
     name = "+File",
-    f = { "<cmd>Telescope find_files<cr>", "Find files" },
+    f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
     g = { "<cmd>Telescope live_grep<cr>", "Ripgrep" },
     b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
