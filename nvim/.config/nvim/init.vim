@@ -5,10 +5,9 @@ source $HOME/.config/nvim/themes/nord.vim
 luafile $HOME/.config/nvim/themes/lualine.lua
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
-source $HOME/.config/nvim/plug-config/lsp-config.vim
+source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
-source $HOME/.config/nvim/plug-config/lspsaga.vim
 source $HOME/.config/nvim/plug-config/autosave.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/vimspector.vim
