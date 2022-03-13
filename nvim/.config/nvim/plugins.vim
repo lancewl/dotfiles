@@ -25,7 +25,7 @@ Plug 'folke/which-key.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'Pocco81/AutoSave.nvim'
-Plug 'mhinz/vim-startify'
+Plug 'goolord/alpha-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'puremourning/vimspector'
 Plug 'ThePrimeagen/harpoon'

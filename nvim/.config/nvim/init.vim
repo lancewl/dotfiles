@@ -9,9 +9,9 @@ source $HOME/.config/nvim/plug-config/lsp.vim
 source $HOME/.config/nvim/plug-config/nvim-tree.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/autosave.vim
-source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/vimspector.vim
 source $HOME/.config/nvim/plug-config/fix-cursorhold.vim
+luafile $HOME/.config/nvim/plug-config/alpha.lua
 luafile $HOME/.config/nvim/plug-config/which-key.lua
 luafile $HOME/.config/nvim/plug-config/cmp.lua
 luafile $HOME/.config/nvim/plug-config/nvim-autopairs.lua
