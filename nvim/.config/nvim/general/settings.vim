@@ -41,4 +41,5 @@ if (has("termguicolors"))
 endif
 
 " Get syntax highlighting for Jenkinsfile
-au BufNewFile,BufRead Jenkinsfile setf groovy
+au BufEnter Jenkinsfile setf groovy
+au BufEnter Jenkinsfile syntax sync fromstart

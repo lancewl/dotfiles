@@ -90,6 +90,7 @@ wk.register({
   ["<leader>f"] = {
     name = "+File",
     f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
+    F = { "<cmd>Telescope find_files hidden=true no_ignore=true<cr>", "Find files no ignore" },
     g = { "<cmd>Telescope live_grep<cr>", "Ripgrep" },
     b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     h = { "<cmd>Telescope help_tags<cr>", "Help tags" },
@@ -104,7 +105,7 @@ wk.register({
     s = { "<cmd>LspStart<cr>", "Lsp Start" },
     r = { "<cmd>LspRestart<cr>", "Lsp Restart" },
     t = { "<cmd>LspStop<cr>", "Lsp Stop" },
-    f = { "<cmd>lua vim.lsp.buf.formatting_sync()<cr>", "Lsp Format"}
+    f = { "<cmd>lua vim.lsp.buf.formatting_sync(nil, 5000)<cr>", "Lsp Format"}
   },
 })
 
