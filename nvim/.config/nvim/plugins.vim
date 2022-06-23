@@ -32,6 +32,7 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'tpope/vim-surround'
 Plug 'phaazon/hop.nvim'
 Plug 'towolf/vim-helm'
+Plug 'wellle/targets.vim'
 
 " For Git
 Plug 'tpope/vim-fugitive'
