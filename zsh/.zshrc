@@ -15,6 +15,13 @@ else
     export PATH="/usr/local/go/bin:$PATH"
 fi
 
+# autoenv
+# check before loading the oh oh-my-zsh plugins
+if [ ! -d ~/.autoenv ]
+then
+    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
+fi
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -121,13 +128,6 @@ fi
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Autoenv
-if [ ! -d ~/.autoenv ]
-then
-    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
-fi
-source ~/.autoenv/activate.sh
 
 # Lazygit
 export LG_CONFIG_FILE=~/.config/lazygit/config.yml
