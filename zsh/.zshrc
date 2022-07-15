@@ -15,6 +15,14 @@ else
     export PATH="/usr/local/go/bin:$PATH"
 fi
 
+# Pyenv settings
+# Running before autoenv setup to prevent messing up python venv activation
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if type pyenv > /dev/null 2>&1; then
+  eval "$(pyenv init --path)";
+fi
+
 # autoenv
 # check before loading the oh oh-my-zsh plugins
 if [ ! -d ~/.autoenv ]
@@ -101,13 +109,6 @@ if type ruby > /dev/null 2>&1; then
   export PATH="$(ruby -e 'puts Gem.bindir'):$PATH"
   source $(dirname $(gem which colorls))/tab_complete.sh
   alias lc='colorls'
-fi
-
-# Pyenv settings
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if type pyenv > /dev/null 2>&1; then
-  eval "$(pyenv init --path)";
 fi
 
 # Go settings
