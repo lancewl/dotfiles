@@ -1,4 +1,4 @@
-" auto-install vim-plug
+" autouto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -24,7 +24,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'folke/which-key.nvim'
 Plug 'junegunn/goyo.vim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'Pocco81/AutoSave.nvim'
+Plug 'Pocco81/auto-save.nvim'
 Plug 'goolord/alpha-nvim'
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'puremourning/vimspector'
@@ -41,7 +41,7 @@ Plug 'tpope/vim-rhubarb'
 " LSP
 Plug 'nvim-lua/plenary.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'tami5/lspsaga.nvim'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'j-hui/fidget.nvim'

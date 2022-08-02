@@ -99,15 +99,10 @@ end
 -- Load Lspsaga --
 local saga = require 'lspsaga'
 
-saga.setup {
+saga.init_lsp_saga {
   -- diagnostic sign
-  error_sign = "▊",
-  warn_sign = "▊",
-  hint_sign = "▊",
-  infor_sign = "▊",
+  diagnostic_header = { "▊", "▊", "▊", "▊" },
 }
-
-saga.init_lsp_saga()
 
 -- Load fidget for nvim-lsp progress --
 require"fidget".setup{}
