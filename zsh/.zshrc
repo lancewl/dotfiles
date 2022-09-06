@@ -15,20 +15,6 @@ else
     export PATH="/usr/local/go/bin:$PATH"
 fi
 
-# Pyenv settings
-# Running before autoenv setup to prevent messing up python venv activation
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if type pyenv > /dev/null 2>&1; then
-  eval "$(pyenv init --path)";
-fi
-
-# autoenv
-# check before loading the oh oh-my-zsh plugins
-if [ ! -d ~/.autoenv ]
-then
-    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
-fi
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -88,7 +74,6 @@ SPACESHIP_VENV_SUFFIX=') '
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    autoenv
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -114,6 +99,12 @@ fi
 # Go settings
 export PATH="$HOME/go/bin:$PATH"
 
+# Pyenv settings
+# Running before autoenv setup to prevent messing up python venv activation
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
 # Neovim
 if type nvim > /dev/null 2>&1; then
   alias v='nvim'
@@ -132,3 +123,10 @@ fi
 
 # Lazygit
 export LG_CONFIG_FILE=~/.config/lazygit/config.yml
+
+# autoenv
+if [ ! -d ~/.autoenv ]
+then
+    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
+fi
+source ~/.autoenv/activate.sh
