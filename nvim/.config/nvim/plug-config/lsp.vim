@@ -32,10 +32,11 @@ highlight link TargetWord Function
 highlight link ReferencesCount Function
 highlight link ReferencesIcon Todo
 highlight link DefinitionCount Function
-highlight link DefinitionIcon Todo
+highlight link DefinitionsIcon Todo
 highlight link LspSagaFinderSelection String
 highlight link LspSagaLspFinderBorder Function
 highlight link LspSagaAutoPreview Function
+highlight link FinderVirtText Function
 
 lua << EOF
 local nvim_lsp = require('lspconfig')
