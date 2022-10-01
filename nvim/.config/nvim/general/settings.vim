@@ -45,3 +45,5 @@ au BufEnter Jenkinsfile setf groovy
 au BufEnter Jenkinsfile syntax sync fromstart
 
 let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
+
+let g:indentLine_setConceal = 0
