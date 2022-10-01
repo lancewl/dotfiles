@@ -1,4 +1,3 @@
-lua << EOF
 local autosave = require("auto-save")
 
 autosave.setup(
@@ -16,4 +15,3 @@ autosave.setup(
         debounce_delay = 100
     }
 )
-EOF
