@@ -55,7 +55,8 @@ require("null-ls").setup({
         require("null-ls").builtins.formatting.black,
     },
     default_timeout = 15000,
-    debounce = 500,
+    debounce = 1000,
+    update_in_insert = false,
     debug = false,
     -- on_attach = function(client)
     --     if client.resolved_capabilities.document_formatting then
@@ -90,7 +91,7 @@ local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     flags = {
-      debounce_text_changes = 500,
+      debounce_text_changes = 1000,
     },
     on_attach = on_attach,
     capabilities = capabilities,
