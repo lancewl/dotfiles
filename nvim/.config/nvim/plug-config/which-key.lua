@@ -22,11 +22,11 @@ wk.register({
   ["<leader>"] = {
     e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
     s = { "<cmd>set spell!<cr>", "Spell check" },
-    S = { "<cmd>Startify<cr>", "Startify" },
     r = { "<cmd>source $MYVIMRC<cr>", "Reload init.vim" },
     z = { "<cmd>Goyo<cr>", "Zen" },
     c = { "<cmd>bd<cr>", "Close buffer" },
     b = { "<cmd>set wrap!<cr><cmd>set linebreak!<cr>", "Line wrapping"},
+    a = { "<cmd>Neogen<cr>", "Neogen Annotation"},
     ["<space>"] = { "<cmd>nohlsearch<cr>", "noh" },
   },
 })
