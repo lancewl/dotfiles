@@ -108,15 +108,3 @@ wk.register({
     f = { "<cmd>lua vim.lsp.buf.formatting_sync(nil, 5000)<cr>", "Lsp Format"}
   },
 })
-
-wk.register({
-  ["<leader>h"] = {
-    name = "+Harpoon",
-    h = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Toggle menu" },
-    m = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Mark file" },
-    ["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<cr>", "Navigate to index 1" },
-    ["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<cr>", "Navigate to index 2" },
-    ["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<cr>", "Navigate to index 3" },
-    ["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<cr>", "Navigate to index 4" },
-  },
-})
