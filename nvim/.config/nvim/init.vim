@@ -11,6 +11,7 @@ source $HOME/.config/nvim/plug-config/vimspector.vim
 source $HOME/.config/nvim/plug-config/fix-cursorhold.vim
 luafile $HOME/.config/nvim/plug-config/treesitter.lua
 luafile $HOME/.config/nvim/plug-config/alpha.lua
+luafile $HOME/.config/nvim/plug-config/neogen.lua
 luafile $HOME/.config/nvim/plug-config/which-key.lua
 luafile $HOME/.config/nvim/plug-config/cmp.lua
 luafile $HOME/.config/nvim/plug-config/nvim-autopairs.lua

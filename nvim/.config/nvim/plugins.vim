@@ -28,6 +28,7 @@ Plug 'voldikss/vim-floaterm'
 
 " Style & Format
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'danymat/neogen'
 Plug 'windwp/nvim-autopairs'
 Plug 'b3nj5m1n/kommentary'
 Plug 'Yggdroot/indentLine'
