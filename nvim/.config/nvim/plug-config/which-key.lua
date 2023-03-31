@@ -27,6 +27,8 @@ wk.register({
     c = { "<cmd>bd<cr>", "Close buffer" },
     b = { "<cmd>set wrap!<cr><cmd>set linebreak!<cr>", "Line wrapping"},
     a = { "<cmd>Neogen<cr>", "Neogen Annotation"},
+    ["2"] = { "<cmd>set tabstop=2<cr><cmd>set shiftwidth=2<cr>", "Tab = 2 Spaces" },
+    ["4"] = { "<cmd>set tabstop=4<cr><cmd>set shiftwidth=4<cr>", "Tab = 4 Spaces" },
     ["<space>"] = { "<cmd>nohlsearch<cr>", "noh" },
   },
 })

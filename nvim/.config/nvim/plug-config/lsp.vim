@@ -72,7 +72,7 @@ require("null-ls").setup({
 
 local function on_attach(client, bufnr)
     -- Find the clients capabilities
-    local cap = client.resolved_capabilities
+    local cap = client.server_capabilities
 
     -- Only highlight if compatible with the language
     if cap.document_highlight then
@@ -86,7 +86,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -101,7 +101,7 @@ end
 -- Load Lspsaga --
 local saga = require 'lspsaga'
 
-saga.init_lsp_saga {
+saga.setup {
   -- diagnostic sign
   diagnostic_header = { "▊", "▊", "▊", "▊" },
 }
