@@ -33,9 +33,8 @@ highlight link ReferencesCount Function
 highlight link ReferencesIcon Todo
 highlight link DefinitionCount Function
 highlight link DefinitionsIcon Todo
-highlight link LspSagaFinderSelection String
-highlight link LspSagaLspFinderBorder Function
-highlight link LspSagaAutoPreview Function
+highlight link SagaBorder Function
+highlight link SagaWinbarSep Function
 highlight link FinderVirtText Function
 
 lua << EOF
