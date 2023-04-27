@@ -28,4 +28,10 @@ return {
       },
     },
   },
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
+    keys = { { "<leader>cn", "<cmd>Neogen<cr>", desc = "Neogen Annotation" } },
+  },
 }
