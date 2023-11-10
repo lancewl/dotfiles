@@ -24,7 +24,7 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 
-SPACESHIP_CHAR_SYMBOL=➤
+SPACESHIP_CHAR_SYMBOL=󱞪
 SPACESHIP_CHAR_PREFIX=''
 SPACESHIP_CHAR_SUFFIX=' '
 SPACESHIP_VENV_PREFIX='('
