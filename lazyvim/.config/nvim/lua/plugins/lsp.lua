@@ -18,14 +18,33 @@ return {
       keys[#keys + 1] = { "gk", diagnostic_goto(false), desc = "Prev Diagnostic" }
     end,
     opts = {
-      autoformat = false,
       servers = {
         pyright = {},
       },
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "mfussenegger/nvim-lint",
+    opts = {
+      linters_by_ft = {
+        python = { "pylint" },
+      },
+    },
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = function()
+      local opts = {
+        formatters_by_ft = {
+          python = { "black" },
+        },
+      }
+      return opts
+    end,
+  },
+  --[[
+  {
+    "nvimtools/none-ls.nvim",
     opts = function()
       local nls = require("null-ls")
       return {
@@ -40,4 +59,6 @@ return {
       }
     end,
   },
+  ]]
+  --
 }

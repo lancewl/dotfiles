@@ -44,9 +44,8 @@ return {
     end,
   },
   {
-    "goolord/alpha-nvim",
+    "nvimdev/dashboard-nvim",
     opts = function()
-      local dashboard = require("alpha.themes.dashboard")
       local logo = [[
       ██╗      █████╗ ███╗   ██╗ ██████╗███████╗██╗    ██╗██╗     
       ██║     ██╔══██╗████╗  ██║██╔════╝██╔════╝██║    ██║██║     
@@ -55,9 +54,13 @@ return {
       ███████╗██║  ██║██║ ╚████║╚██████╗███████╗╚███╔███╔╝███████╗
       ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚══════╝ ╚══╝╚══╝ ╚══════╝
       ]]
-
-      dashboard.section.header.val = vim.split(logo, "\n")
-      return dashboard
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+      local opts = {
+        config = {
+          header = vim.split(logo, "\n"),
+        }
+      }
+      return opts
     end,
   },
 }
