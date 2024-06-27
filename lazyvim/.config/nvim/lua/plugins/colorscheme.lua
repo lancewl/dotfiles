@@ -1,5 +1,5 @@
 return {
-  { "nordtheme/vim" },
+  { "shaunsingh/nord.nvim" },
 
   -- Configure LazyVim to load nord
   {

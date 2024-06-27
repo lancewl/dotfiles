@@ -19,7 +19,9 @@ return {
     end,
     opts = {
       servers = {
-        pyright = {},
+        pyright = {
+          mason = false,
+        },
       },
     },
   },
@@ -35,6 +37,9 @@ return {
     "stevearc/conform.nvim",
     opts = function()
       local opts = {
+        format = {
+          timeout_ms = 3000,
+        },
         formatters_by_ft = {
           python = { "black" },
         },
