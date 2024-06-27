@@ -29,6 +29,9 @@ SPACESHIP_CHAR_PREFIX=''
 SPACESHIP_CHAR_SUFFIX=' '
 SPACESHIP_VENV_PREFIX='('
 SPACESHIP_VENV_SUFFIX=') '
+SPACESHIP_DOCKER_SHOW=false
+SPACESHIP_KUBECTL_VERSION_SHOW=false
+SPACESHIP_KUBECTL_SHOW=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -83,9 +86,9 @@ source $ZSH/oh-my-zsh.sh
 # NVM (For Node.js) settings
 if [ ! -d ~/.nvm ]
 then
-    git clone https://github.com/nvm-sh/nvm.git ~/.nvm
+    git clone https://github.com/nvm-sh/nvm.git $HOME/.nvm
 fi
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/etc/bash_completion.d/nvm" ] && . "$NVM_DIR/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
@@ -130,3 +133,17 @@ then
     git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
 fi
 source ~/.autoenv/activate.sh
+
+# kubectl autocomplete
+if type switcher > /dev/null 2>&1; then
+  source <(kubectl completion zsh)
+fi
+
+# kubectl context switcher
+if type switcher > /dev/null 2>&1; then
+  source <(switcher init zsh)
+fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/lance.wenglin/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
