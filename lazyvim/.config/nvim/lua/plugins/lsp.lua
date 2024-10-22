@@ -33,37 +33,4 @@ return {
       },
     },
   },
-  {
-    "stevearc/conform.nvim",
-    opts = function()
-      local opts = {
-        format = {
-          timeout_ms = 3000,
-        },
-        formatters_by_ft = {
-          python = { "black" },
-        },
-      }
-      return opts
-    end,
-  },
-  --[[
-  {
-    "nvimtools/none-ls.nvim",
-    opts = function()
-      local nls = require("null-ls")
-      return {
-        sources = {
-          nls.builtins.diagnostics.pylint,
-          nls.builtins.formatting.black,
-        },
-        default_timeout = 15000,
-        debounce = 1000,
-        update_in_insert = false,
-        debug = false,
-      }
-    end,
-  },
-  ]]
-  --
 }
