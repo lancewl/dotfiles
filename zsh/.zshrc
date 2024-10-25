@@ -75,6 +75,14 @@ SPACESHIP_KUBECTL_SHOW=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+# autoenv
+if [ ! -d ~/.autoenv ]
+then
+    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
+fi
+source ~/.autoenv/activate.sh
+
 plugins=(
     git
     zsh-autosuggestions
@@ -126,13 +134,6 @@ fi
 
 # Lazygit
 export LG_CONFIG_FILE=~/.config/lazygit/config.yml
-
-# autoenv
-if [ ! -d ~/.autoenv ]
-then
-    git clone https://github.com/hyperupcall/autoenv.git ~/.autoenv
-fi
-source ~/.autoenv/activate.sh
 
 # kubectl autocomplete
 if type switcher > /dev/null 2>&1; then
