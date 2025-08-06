@@ -8,3 +8,4 @@ opt.tabstop = 2    -- Number of spaces tabs count for
 
 vim.g.autoformat = false
 vim.g.python3_host_prog = '~/.pyenv/shims/python'
+vim.g.snacks_animate = false
