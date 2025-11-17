@@ -32,8 +32,12 @@ return {
       filesystem = {
         filtered_items = {
           visible = true,
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
+  {
+    "ibhagwan/fzf-lua",
+    opts = { hls = { header_text = "FzfLuaHeaderBind" } },
+  },
 }
