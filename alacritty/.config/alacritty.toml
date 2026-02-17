@@ -1,0 +1,19 @@
+[general]
+live_config_reload = true
+import = [
+    "~/.config/alacritty/themes/themes/nordfox.toml"
+]
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window]
+decorations = "buttonless"
+opacity = 0.95
+
+[window.padding]
+x = 10
+y = 10

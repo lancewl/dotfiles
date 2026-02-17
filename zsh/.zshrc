@@ -148,3 +148,6 @@ fi
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/lance.wenglin/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+# Mongodb Kanopy
+export PATH="$HOME/.kanopy/bin:$PATH"
