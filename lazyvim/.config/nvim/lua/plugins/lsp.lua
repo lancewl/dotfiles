@@ -20,9 +20,6 @@ return {
             { "gk", diagnostic_goto(false), desc = "Prev Diagnostic" },
           },
         },
-        pyright = {
-          mason = false,
-        },
       },
     },
   },
