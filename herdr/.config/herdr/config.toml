@@ -83,7 +83,7 @@ auto_switch = false
 # help = "prefix+?"
 # settings = "prefix+s"
 # detach = "prefix+q"
-# reload_config = "prefix+shirt+r"
+reload_config = "prefix+shift+r"
 # open_notification_target = "prefix+o"
 # workspace_picker = "prefix+w"
 # goto = "prefix+g"
@@ -111,10 +111,11 @@ auto_switch = false
 # rename_pane = "prefix+shift+p"
 # edit_scrollback = "prefix+e"
 # clear_pane = ""                  # unbound; e.g. "prefix+ctrl+k"
-focus_pane_left = "ctrl+h"
-focus_pane_down = "ctrl+j"
-focus_pane_up = "ctrl+k"
-focus_pane_right = "ctrl+l"
+# ctrl+h/j/k/l are handled by navigate.sh (see [[keys.command]] below) for nvim integration
+focus_pane_left = ""
+focus_pane_down = ""
+focus_pane_up = ""
+focus_pane_right = ""
 # cycle_pane_next = "prefix+tab"
 # cycle_pane_previous = "prefix+shift+tab"
 # last_pane = ""          # optional, unset by default; bind e.g. "prefix+tab" for global back-and-forth
@@ -150,6 +151,26 @@ resize_pane_right = "shift+right"  # optional, e.g. "ctrl+shift+alt+right"
 # command = "lazygit"
 # width = "80%"
 # height = "80%"
+
+[[keys.command]]
+key = "ctrl+h"
+type = "shell"
+command = "~/.config/herdr/navigate.sh left ctrl+h"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "shell"
+command = "~/.config/herdr/navigate.sh down ctrl+j"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "shell"
+command = "~/.config/herdr/navigate.sh up ctrl+k"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "shell"
+command = "~/.config/herdr/navigate.sh right ctrl+l"
 
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.

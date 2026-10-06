@@ -5,22 +5,30 @@ return {
     keys = {
       {
         "<C-h>",
-        "<Cmd>NvimTmuxNavigateLeft<cr>",
+        function()
+          require("util.navigate").go("h")
+        end,
         desc = "Navigate left",
       },
       {
         "<C-j>",
-        "<Cmd>NvimTmuxNavigateDown<cr>",
+        function()
+          require("util.navigate").go("j")
+        end,
         desc = "Navigate down",
       },
       {
         "<C-k>",
-        "<Cmd>NvimTmuxNavigateUp<cr>",
+        function()
+          require("util.navigate").go("k")
+        end,
         desc = "Navigate up",
       },
       {
         "<C-l>",
-        "<Cmd>NvimTmuxNavigateRight<cr>",
+        function()
+          require("util.navigate").go("l")
+        end,
         desc = "Navigate right",
       },
     },

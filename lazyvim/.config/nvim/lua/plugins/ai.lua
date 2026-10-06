@@ -9,7 +9,7 @@ return {
               "<C-h>",
               function()
                 vim.cmd("stopinsert")
-                vim.cmd("NvimTmuxNavigateLeft")
+                require("util.navigate").go("h")
               end,
               mode = "t",
               desc = "Navigate left",
@@ -18,7 +18,7 @@ return {
               "<C-j>",
               function()
                 vim.cmd("stopinsert")
-                vim.cmd("NvimTmuxNavigateDown")
+                require("util.navigate").go("j")
               end,
               mode = "t",
               desc = "Navigate down",
@@ -27,7 +27,7 @@ return {
               "<C-k>",
               function()
                 vim.cmd("stopinsert")
-                vim.cmd("NvimTmuxNavigateUp")
+                require("util.navigate").go("k")
               end,
               mode = "t",
               desc = "Navigate up",
@@ -36,7 +36,7 @@ return {
               "<C-l>",
               function()
                 vim.cmd("stopinsert")
-                vim.cmd("NvimTmuxNavigateRight")
+                require("util.navigate").go("l")
               end,
               mode = "t",
               desc = "Navigate right",
