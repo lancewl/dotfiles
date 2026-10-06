@@ -1,31 +1,49 @@
 return {
   {
-    "olimorris/codecompanion.nvim",
-    version = "^18.0.0",
-    lazy = false,
-    config = function()
-      require("codecompanion").setup()
-      vim.cmd([[cab cc CodeCompanion]])
-    end,
-    keys = {
-      { "<leader>a", "", desc = "+AI", mode = { "n", "x" } },
-      {
-        "<leader>ac",
-        "<cmd>CodeCompanionChat Toggle<cr>",
-        mode = { "n", "x" },
-        desc = "Chat (CodeCompanion)",
+    "coder/claudecode.nvim",
+    opts = {
+      terminal = {
+        snacks_win_opts = {
+          keys = {
+            nav_h = {
+              "<C-h>",
+              function()
+                vim.cmd("stopinsert")
+                vim.cmd("NvimTmuxNavigateLeft")
+              end,
+              mode = "t",
+              desc = "Navigate left",
+            },
+            nav_j = {
+              "<C-j>",
+              function()
+                vim.cmd("stopinsert")
+                vim.cmd("NvimTmuxNavigateDown")
+              end,
+              mode = "t",
+              desc = "Navigate down",
+            },
+            nav_k = {
+              "<C-k>",
+              function()
+                vim.cmd("stopinsert")
+                vim.cmd("NvimTmuxNavigateUp")
+              end,
+              mode = "t",
+              desc = "Navigate up",
+            },
+            nav_l = {
+              "<C-l>",
+              function()
+                vim.cmd("stopinsert")
+                vim.cmd("NvimTmuxNavigateRight")
+              end,
+              mode = "t",
+              desc = "Navigate right",
+            },
+          },
+        },
       },
-      {
-        "<leader>aa",
-        "<cmd>CodeCompanionActions<cr>",
-        mode = { "n", "x" },
-        desc = "Actions (CodeCompanion)",
-      },
-    },
-    opts = {},
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
     },
   },
 }

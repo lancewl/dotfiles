@@ -15,11 +15,26 @@ return {
           keys = {
             { "K", false },
             { "gh", vim.lsp.buf.hover, desc = "Hover" },
-            { "<leader>cL", "<cmd>LspRestart<cr>", desc = "Lsp Restart" },
+            { "<leader>cR", "<cmd>lsp restart<cr>", desc = "Lsp Restart" },
             { "gj", diagnostic_goto(true), desc = "Next Diagnostic" },
             { "gk", diagnostic_goto(false), desc = "Prev Diagnostic" },
           },
         },
+        gopls = {
+          settings = {
+            gopls = {
+              buildFlags = { "-tags=all_test" },
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "linux-cultist/venv-selector.nvim",
+    opts = {
+      options = {
+        log_level = "TRACE",
       },
     },
   },

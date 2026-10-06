@@ -1,11 +1,43 @@
 return {
   {
-    "christoomey/vim-tmux-navigator",
+    "alexghergh/nvim-tmux-navigation",
+    lazy = false,
+    keys = {
+      {
+        "<C-h>",
+        "<Cmd>NvimTmuxNavigateLeft<cr>",
+        desc = "Navigate left",
+      },
+      {
+        "<C-j>",
+        "<Cmd>NvimTmuxNavigateDown<cr>",
+        desc = "Navigate down",
+      },
+      {
+        "<C-k>",
+        "<Cmd>NvimTmuxNavigateUp<cr>",
+        desc = "Navigate up",
+      },
+      {
+        "<C-l>",
+        "<Cmd>NvimTmuxNavigateRight<cr>",
+        desc = "Navigate right",
+      },
+    },
+    config = true,
   },
   {
     "Pocco81/auto-save.nvim",
     opts = {
       debounce_delay = 100,
+      condition = function(buf)
+        local fn = vim.fn
+        -- skip autosave if this is a special/floating buftype (covers Harpoon's menu)
+        if fn.getbufvar(buf, "&buftype") ~= "" then
+          return false
+        end
+        return true
+      end,
     },
   },
   {
