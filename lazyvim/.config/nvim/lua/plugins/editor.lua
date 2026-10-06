@@ -69,6 +69,21 @@ return {
     },
   },
   {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory", "DiffviewToggleFiles" },
+    keys = {
+      { "<leader>gvo", "<Cmd>DiffviewOpen<cr>", desc = "Diffview Open" },
+      { "<leader>gvc", "<Cmd>DiffviewClose<cr>", desc = "Diffview Close" },
+      { "<leader>gvh", "<Cmd>DiffviewFileHistory %<cr>", desc = "Diffview File History" },
+      { "<leader>gvH", "<Cmd>DiffviewFileHistory<cr>", desc = "Diffview Repo History" },
+      { "<leader>gvh", ":DiffviewFileHistory<cr>", mode = "v", desc = "Diffview Selection History" },
+      { "<leader>gvm", "<Cmd>DiffviewOpen origin/main...HEAD<cr>", desc = "Diffview vs origin/main" },
+      { "<leader>gvt", "<Cmd>DiffviewToggleFiles<cr>", desc = "Diffview Toggle Files" },
+    },
+    opts = {},
+  },
+  { "folke/which-key.nvim", opts = { spec = { { "<leader>gv", group = "diffview" } } } },
+  {
     "ibhagwan/fzf-lua",
     opts = { hls = { header_text = "FzfLuaHeaderBind" } },
   },
